@@ -111,7 +111,7 @@ class RequestWrapper(object):
 			RETURN_JSON = False
 		elif MODE == self.MODE_FILES:
 			OPTS['files'] = POSTDATA
-			RETURN_JSON = False
+			RETURN_JSON = True
 		else:
 			return [False, "Unvalid value %d passed on executePost" % MODE]
 
