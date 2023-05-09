@@ -6,5 +6,5 @@ setup(name='requestswrapper',
       author_email='russell.t.dickerson@gmail.com',
       url="https://github.com/rtdickerson/requestswrapper/",
       license='MIT',
-      packages=['hello'],
+      packages=['requestswrapper'],
       zip_safe=False)
