@@ -13,7 +13,7 @@ class test01:
 
 	def execute(self, VERBOSE=False):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executeGet("https://httpbin.org/")
 		if VERBOSE:
 			print ("Response from library:")
@@ -39,7 +39,7 @@ class test02:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executeGet("https://httpbin.org/", {'arg1' : 202, 'arg2' : 'foo'})
 		if VERBOSE:
 			print ("Response from library:")
@@ -65,7 +65,7 @@ class test03:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executePost("https://httpbin.org/post", RO.MODE_JSON, {'arg1' : 202, 'arg2' : 'foo'})
 		if VERBOSE:
 			print ("Response from library:")
@@ -86,7 +86,7 @@ class test04:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executePost("https://httpbin.org/post", RO.MODE_DATA, {'arg1' : 202, 'arg2' : 'foo'})
 		if VERBOSE:
 			print ("Response from library:")
@@ -108,7 +108,7 @@ class test05:
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
 		FH = open("testdata.dat", "rb")
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executePost("https://httpbin.org/post", RO.MODE_FILES, {'upload_file' : FH})
 		if VERBOSE:
 			print ("Response from library:")
@@ -127,7 +127,7 @@ class test06:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executeHead("https://httpbin.org/")
 		if VERBOSE:
 			print ("Response from library:")
@@ -146,7 +146,7 @@ class test07:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executeHead("https://httpbin.org/badurlnohead")
 		if VERBOSE:
 			print ("Response from library:")
@@ -165,7 +165,7 @@ class test08:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executeOptions("https://httpbin.org/")
 		if VERBOSE:
 			print ("Response from library:")
@@ -186,7 +186,7 @@ class test09:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		for CODE in [404, 403, 500]:
 			if VERBOSE:
 				print ("Get a %d code" % CODE)
@@ -208,7 +208,7 @@ class test10:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		for CODE in [404, 403, 500]:
 			if VERBOSE:
 				print ("Get a %d code" % CODE)
@@ -230,7 +230,7 @@ class test11:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executeDelete("https://httpbin.org/delete")
 		if VERBOSE:
 			print ("Response from library:")
@@ -249,7 +249,7 @@ class test12:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executeDelete("https://httpbin.org/deletebadurl")
 		if VERBOSE:
 			print ("Response from library:")
@@ -268,7 +268,7 @@ class test13:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executePatch("https://httpbin.org/patch")
 		if VERBOSE:
 			print ("Response from library:")
@@ -287,7 +287,7 @@ class test14:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executePatch("https://httpbin.org/patchbadurl")
 		if VERBOSE:
 			print ("Response from library:")
@@ -306,7 +306,7 @@ class test15:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executePut("https://httpbin.org/put")
 		if VERBOSE:
 			print ("Response from library:")
@@ -325,7 +325,7 @@ class test16:
 
 	def execute(self, VERBOSE):
 		print ("Begin %s" % self.desc)
-		RO = RequestsWrapper.RequestWrapper()
+		RO = RequestsWrapper.RequestsWrapper()
 		response = RO.executePut("https://httpbin.org/putbadurl")
 		if VERBOSE:
 			print ("Response from library:")
